@@ -137,22 +137,28 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center z-10 max-w-4xl"
+          className="text-center z-10 max-w-5xl"
         >
-          <h1 className="text-4xl md:heading-xl bg-clip-text text-transparent bg-gradient-to-br from-white via-gray-200 to-gray-500 mb-6 md:mb-8">
-            ENTREPRENEURSHIP <br />
-            <span className="text-indigo-500">CELL SVCE</span>
+          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-rose-400/30 bg-rose-500/10 px-4 py-2 text-[10px] sm:text-xs font-bold uppercase tracking-[0.35em] text-rose-200 shadow-[0_0_25px_rgba(244,63,94,0.2)]">
+            SVCE • Innovation • Leadership
+          </div>
+          <h1 className="mb-6 md:mb-8 leading-[0.9] tracking-[-0.065em]">
+            <span className="block text-[3.1rem] sm:text-6xl md:text-8xl lg:text-[7rem] font-black text-white drop-shadow-[0_0_35px_rgba(255,255,255,0.15)]">
+              ENTREPRENEURSHIP
+            </span>
+            <span className="mt-2 block bg-gradient-to-r from-rose-300 via-amber-200 to-white bg-clip-text text-transparent text-[2.2rem] sm:text-4xl md:text-6xl lg:text-[5rem] font-black tracking-[-0.05em]">
+              CELL
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-medium mb-12 leading-relaxed max-w-3xl mx-auto">
-            Empowering students with the resources and mentorship needed to build 
-            and scale successful startups at SVCE.
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 font-medium mb-12 leading-relaxed max-w-3xl mx-auto">
+            A bold student ecosystem where ideas ignite, founders rise, and the next generation of startup leaders builds with purpose at SVCE.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6">
             <Link href="/events">
               <button className="premium-button">Explore Events</button>
             </Link>
             <Link href="/about">
-              <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold text-xs uppercase tracking-[0.2em] rounded-2xl border border-white/10 transition-all">
+              <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold text-xs uppercase tracking-[0.2em] rounded-2xl border border-white/10 transition-all hover:border-rose-300/40 hover:text-rose-100">
                 Our Mission
               </button>
             </Link>

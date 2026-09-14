@@ -270,9 +270,16 @@ export default function StartupSimulatorGame() {
           const newValuation = Math.round((newRev * 24) + (newUsers * 500) + (newCapital * 1.5))
 
           // Random Events (15% chance per month)
-          let eventLog = null
+          let eventLog: string | null = null
           if (Math.random() < 0.15) {
-            const events = [
+            const events: Array<{
+              msg: string
+              cap?: number
+              rep?: number
+              users?: number
+              pmf?: number
+              morale?: number
+            }> = [
               { msg: "SVCE E-Cell Pitch Winner! +₹1L Grant & PR Boost!", cap: 100000, rep: 15 },
               { msg: "Viral Tech Reel! +1,200 Organic Users!", users: 1200, pmf: 5 },
               { msg: "Server Crash during peak hours! Morale dropped.", morale: -15 },
@@ -282,6 +289,10 @@ export default function StartupSimulatorGame() {
             eventLog = ev.msg
           }
 
+          const nextLogs: StartupState['logs'] = eventLog
+            ? [{ text: `[EVENT] ${eventLog}`, type: 'info' }, ...s.logs].slice(0, 10) as StartupState['logs']
+            : s.logs
+
           return {
             ...s,
             month: nextMonth,
@@ -290,7 +301,7 @@ export default function StartupSimulatorGame() {
             monthlyRevenue: newRev,
             valuation: newValuation,
             runway: newRunway,
-            logs: eventLog ? [{ text: `[EVENT] ${eventLog}`, type: 'info' }, ...s.logs].slice(0, 10) : s.logs
+            logs: nextLogs
           }
         })
       }, 1500) // 1 month per 1.5s

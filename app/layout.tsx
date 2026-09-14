@@ -25,19 +25,19 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "E-cell SVCE | Entrepreneurship Cell",
-  template: "%s | E-cell SVCE",
+    default: "E-Cell SVCE | Startup Culture",
+    template: "%s | E-Cell SVCE",
   },
-  description: "The official hub for the Entrepreneurship Cell of Sri Venkateswara College of Engineering, fostering innovation and startup culture.",
+  description: "The official entrepreneurship hub at SVCE, empowering students to build bold ideas, startup stories, and creative innovation.",
   keywords: ["entrepreneurship", "E-cell", "SVCE", "startups", "innovation", "business", "engineering"],
-  authors: [{ name: "E-cell SVCE", url: "https://ecell-website-svce.vercel.app" }],
+  authors: [{ name: "E-Cell SVCE", url: "https://ecell-website-svce.vercel.app" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://ecell-website-svce.vercel.app",
-    title: "E-cell SVCE | Entrepreneurship Cell",
-    description: "Fostering the spirit of entrepreneurship at SVCE.",
-    siteName: "E-cell SVCE",
+    title: "E-Cell SVCE | Startup Culture",
+    description: "Fostering a bold entrepreneurial spirit at SVCE.",
+    siteName: "E-Cell SVCE",
     images: [
       {
   url: "/og-image.png",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "E-cell SVCE | Entrepreneurship Cell",
+    title: "E-Cell SVCE | Startup Culture",
     description: "Join the hub of innovation and startup culture at SVCE.",
-  creator: "@ecellsvce",
+    creator: "@ecellsvce",
   images: ["/twitter-image.png"],
   },
   icons: {

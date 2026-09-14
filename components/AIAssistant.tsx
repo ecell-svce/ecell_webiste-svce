@@ -17,7 +17,7 @@ const AIAssistant = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      text: "Hello! I'm the E-Cell SVCE assistant. I can help you with information about our programs, events, team, and services. How can I assist you today?",
+      text: "Hello! I'm the E-Cell Team Assistant. I can help you with team structure, leadership, departments, and member information. How can I assist you today?",
       isUser: false,
       timestamp: new Date(),
     },
@@ -99,7 +99,7 @@ const AIAssistant = () => {
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold text-white">E-Cell Assistant</h3>
+                    <h3 className="text-sm font-bold text-white">E-Cell Team Assistant</h3>
                     <div className="flex items-center gap-2 mt-1">
                        <span className="w-2 h-2 rounded-full bg-green-500" />
                        <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Online</span>
@@ -161,7 +161,7 @@ const AIAssistant = () => {
                     value={inputText}
                     onChange={(e) => setInputText(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Ask about programs, quiz, events, alumni..."
+                    placeholder="Ask about team members, leadership, roles, departments..."
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 pr-16 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
                   />
                   <button

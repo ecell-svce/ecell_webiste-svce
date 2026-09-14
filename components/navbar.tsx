@@ -88,7 +88,7 @@ const Navbar = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className={`font-black uppercase tracking-[0.2em] transition-all duration-500 ${scrolled ? "text-sm text-indigo-400" : "text-base text-white"}`}>
+              <span className={`font-black uppercase tracking-[0.2em] transition-all duration-500 ${scrolled ? "text-sm text-rose-400" : "text-base text-white"}`}>
                 E-Cell
               </span>
               <span className={`font-bold uppercase tracking-[0.4em] text-[8px] transition-all duration-500 ${scrolled ? "text-white/40" : "text-white/20"}`}>
@@ -126,7 +126,7 @@ const Navbar = () => {
                 href={link.href}
                 className={`px-5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-[0.25em] transition-all duration-300 relative group overflow-hidden ${
                   isActive 
-                    ? "text-indigo-400 bg-indigo-500/10 border border-indigo-500/20" 
+                    ? "text-rose-300 bg-rose-500/10 border border-rose-500/20" 
                     : "text-gray-400 hover:text-white"
                 }`}
               >
@@ -146,7 +146,7 @@ const Navbar = () => {
         <div className="hidden lg:block relative" ref={dropdownRef}>
           <button 
             onClick={() => setShowJoin(!showJoin)}
-            className={`px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-[9px] uppercase tracking-[0.3em] rounded-xl transition-all shadow-lg flex items-center gap-2 group ${showJoin ? 'ring-2 ring-indigo-400 ring-offset-2 ring-offset-black' : ''}`}
+            className={`px-6 py-2.5 bg-gradient-to-r from-rose-600 to-amber-400 hover:brightness-110 text-white font-bold text-[9px] uppercase tracking-[0.3em] rounded-xl transition-all shadow-lg flex items-center gap-2 group ${showJoin ? 'ring-2 ring-rose-400 ring-offset-2 ring-offset-black' : ''}`}
           >
             Join Us <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${showJoin ? 'rotate-180' : ''}`} />
           </button>
